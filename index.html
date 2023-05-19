@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #f2f2f2;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: #ff0000;
+            margin-top: 5px;
+        }
+    </style>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+    }
+    .nested-table {
+        border: none;
+        margin: 0;
+    }
+</style>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+    }
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .error-message {
+        color: #ff0000;
+        margin-top: 5px;
+    }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#books">Books</a>
+        <a href="#register">Register</a>
+    </div>
+
+    <div class="container">
+        <h2 id="books">Books</h2>
+        <!-- Books content goes here -->
+    </div>
+
+    <script>
+        // Smooth scrolling to anchor links
+        const navbarLinks = document.querySelectorAll(".navbar a");
+        for (let link of navbarLinks) {
+            link.addEventListener("click", smoothScroll);
+        }
+
+        function smoothScroll(event) {
+            event.preventDefault();
+            const targetId = event.currentTarget.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+            });
+        }
+    </script>
+    <br>
+
+<table>
+    <tr>
+        <th>Book ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Availability</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>
+            <table class="nested-table">
+                <tr>
+                    <th>Publication Date</th>
+                    <th>Page Count</th>
+                    <th>ISBN</th>
+                </tr>
+                <tr>
+                    <td>June 26, 1997</td>
+                    <td>320</td>
+                    <td>978-0590353403</td>
+                </tr>
+            </table>
+        </td>
+        <td>J.K. Rowling</td>
+        <td>Fantasy</td>
+        <td>Available</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>
+            <table class="nested-table">
+                <tr>
+                    <th>Publication Date</th>
+                    <th>Page Count</th>
+                    <th>ISBN</th>
+                </tr>
+                <tr>
+                    <td>March 18, 2003</td>
+                    <td>454</td>
+                    <td>978-0385504201</td>
+                </tr>
+            </table>
+        </td>
+        <td>Dan Brown</td>
+        <td>Thriller</td>
+        <td>Available</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>
+            <table class="nested-table">
+                <tr>
+                    <th>Publication Date</th>
+                    <th>Page Count</th>
+                    <th>ISBN</th>
+                </tr>
+                <tr>
+                    <td>July 11, 1960</td>
+                    <td>336</td>
+                    <td>978-0061120084</td>
+                </tr>
+            </table>
+        </td>
+        <td>Harper Lee</td>
+        <td>Fiction</td>
+        <td>Available</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>
+            <table class="nested-table">
+                <tr>
+                    <th>Publication Date</th>
+                    <th>Page Count</th>
+                    <th>ISBN</th>
+                </tr>
+                <tr>
+                    <td>June 8, 1949</td>
+                    <td>328</td>
+                    <td>978-0451524935</td>
+                </tr>
+            </table>
+        </td>
+        <td>George Orwell</td>
+        <td>Dystopian</td>
+        <td>Unavailable</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>
+            <table class="nested-table">
+                <tr>
+                    <th>Publication Date</th>
+                    <th>Page Count</th>
+                    <th>ISBN</th>
+                </tr>
+                <tr>
+                    <td>May 30, 1967</td>
+                    <td>417</td>
+                    <td>978-0060883287</td>
+                </tr>
+            </table>
+        </td>
+        <td>Gabriel García Márquez</td>
+        <td>Magical Realism</td>
+        <td>Available</td>
+    </tr>
+</table>
+<br>
+<!-- Resgistration form page -->
+<div class="container">
+    <h2 id="register">Registration Form</h2>
+    <form id="registration-form" action="" method="post">
+        <!-- Registration form fields go here -->
+    </form>
+
+</div>
+<br>
+
+<div class="container">
+    <h2>Register</h2>
+    <form id="registration-form" action="" method="post">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="5" max="100" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+<script>
+    // Form submission validation
+    const form = document.getElementById("registration-form");
+    form.addEventListener("submit", function (event) {
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+        if (password !== confirmPassword) {
+            event.preventDefault();
+            const errorMessage = document.createElement("span");
+            errorMessage.className = "error-message";
+            errorMessage.textContent = "Passwords do not match.";
+            form.appendChild(errorMessage);
+        }
+    });
+</script>
+</body>
+</html>
